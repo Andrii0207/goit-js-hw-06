@@ -5,16 +5,17 @@ console.log('addListenerBtn:', addListenerBtn);
 console.log('removeListenerBtn:', removeListenerBtn);
 console.log('counterClickBtn:', counterClickBtn);
 
-let counterValue = (counterClickBtn.textContent = 0);
+let counterValue = 0;
 console.log('counterValue:', counterValue);
 
-addListenerBtn.addEventListener('click', event => {
-  counterValue += Number(counterClickBtn.textContent);
-  console.log('клик по кнопке +1:', event);
+addListenerBtn.addEventListener('click', () => {
+  counterValue += Number(addListenerBtn.textContent);
+  console.log('клик по кнопке +1:', Number(addListenerBtn.textContent));
 });
 
 removeListenerBtn.addEventListener('click', () => {
-  console.log('клик по кнопке -1:');
+  counterValue -= Number(removeListenerBtn.textContent);
+  console.log('клик по кнопке -1:', Number(removeListenerBtn.textContent));
 });
 
-console.log((counterClickBtn.innerHTML = counterValue));
+// console.log((counterClickBtn.innerHTML = counterValue));
