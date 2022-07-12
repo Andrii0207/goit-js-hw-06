@@ -10,11 +10,11 @@ console.log('counterValue:', counterValue);
 
 addListenerBtn.addEventListener('click', () => {
   counterValue += Number(addListenerBtn.textContent);
-  console.log('клик по кнопке +1:', Number(addListenerBtn.textContent));
+  console.log('клик по кнопке +1:', Number(removeListenerBtn.textContent));
 });
 
 removeListenerBtn.addEventListener('click', () => {
-  counterValue -= Number(removeListenerBtn.textContent);
+  counterValue += Number(removeListenerBtn.textContent);
   console.log('клик по кнопке -1:', Number(removeListenerBtn.textContent));
 });
 
