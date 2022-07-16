@@ -21,8 +21,8 @@ console.log(galleryMarkup);
 
 const listEl = document.querySelector('.gallery');
 listEl.insertAdjacentHTML('beforeend', galleryMarkup);
-
-listEl.setAttribute('width', 320);
+console.log(listEl.setAttribute('width', 320));
+console.log(listEl.width);
 
 // const galleryItem = ({ url, alt }) => `<li><img src="${url}" alt="${alt}"></li>`;
 // const galleryMarkup = images.reduce((acc, item) => acc + galleryItem(item), '');
