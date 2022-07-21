@@ -18,11 +18,5 @@ function onFormRegitrationSubmit(event) {
     email: emailInput,
     password: passwordInput,
   };
-
-  console.dir(formElements);
-  console.log('This is form submit');
-
-  console.log(emailInput);
-  console.log(passwordInput);
-  console.log(formData);
+  event.currentTarget.reset();
 }

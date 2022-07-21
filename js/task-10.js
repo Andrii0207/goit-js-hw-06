@@ -9,24 +9,27 @@ const ref = {
   divElement: document.querySelector('#boxes'),
 };
 
-ref.btnCreate.addEventListener('click', createBox);
-
-function createBox(evt) {
-  createBoxes(ref.input.value);
-  ref.input.value;
-}
-
+ref.btnCreate.addEventListener('click', inputValue);
 ref.btnDestroy.addEventListener('click', destroyBoxes);
 
+function inputValue(evt) {
+  createBoxes(ref.input.value);
+  console.log(ref.input.value);
+}
+
 function createBoxes(amount) {
-  for (let i = 0; i <= amount; i += 1) {
+  for (let i = 1; i <= amount; i += 1) {
     const item = document.createElement('div');
     item.style.backgroundColor = getRandomHexColor();
     item.style.width = `${30 + i * 10}px`;
     item.style.height = `${30 + i * 10}px`;
-    ref.divElement.append(item);
+    console.log(item);
+    addCreateItems(item);
   }
-  console.log(amount);
+}
+
+function addCreateItems(item) {
+  ref.divElement.appendChild(item);
 }
 
 function destroyBoxes() {
