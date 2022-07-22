@@ -12,11 +12,13 @@ function onFormRegitrationSubmit(event) {
 
   if (emailInput === '' || passwordInput === '') {
     alert('Please fill in all fields of the form!');
+    return;
   }
-  event.currentTarget.reset();
+
   const formData = {
     email: emailInput,
     password: passwordInput,
   };
   console.log(formData);
+  event.currentTarget.reset();
 }
