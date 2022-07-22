@@ -18,18 +18,19 @@ function inputValue(evt) {
 }
 
 function createBoxes(amount) {
+  const arrayBoxes = [];
+
   for (let i = 1; i <= amount; i += 1) {
     const item = document.createElement('div');
     item.style.backgroundColor = getRandomHexColor();
-    item.style.width = `${30 + i * 10}px`;
-    item.style.height = `${30 + i * 10}px`;
+    item.style.width = `${20 + i * 10}px`;
+    item.style.height = `${20 + i * 10}px`;
     console.log(item);
-    addCreateItems(item);
-  }
-}
 
-function addCreateItems(item) {
-  ref.divElement.appendChild(item);
+    arrayBoxes.push(item);
+    console.log(arrayBoxes);
+  }
+  ref.divElement.append(...arrayBoxes);
 }
 
 function destroyBoxes() {
