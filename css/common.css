@@ -22,13 +22,13 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
-.listElement {
+/* .listElement {
   padding: 0;
   display: flex;
   justify-content: center;
   margin-right: -15px;
   margin-left: -15px;
-}
+} */
 
 .item {
   margin-right: 15px;
@@ -38,4 +38,9 @@ button {
 .item-img {
   display: block;
   width: 320px;
+}
+
+.image {
+  width: 600px;
+  text-decoration: none;
 }
